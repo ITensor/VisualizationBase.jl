@@ -1,0 +1,7 @@
+name = "VisualizationBase"
+uuid = "19e8930c-b694-45c7-b48f-ae1a17da5712"
+authors = ["ITensor developers <support@itensor.org> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.10"
