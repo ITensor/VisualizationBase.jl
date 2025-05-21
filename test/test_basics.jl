@@ -1,6 +1,5 @@
-using VisualizationBase: VisualizationBase, visualize
+using VisualizationBase: VisualizationBase, @visualize, visualize
 using Test: @test, @testset
-using TestExtras: @constinferred
 
 @testset "VisualizationBase" begin
   x = [2, 3]
