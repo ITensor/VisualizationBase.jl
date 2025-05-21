@@ -3,5 +3,9 @@ uuid = "19e8930c-b694-45c7-b48f-ae1a17da5712"
 authors = ["ITensor developers <support@itensor.org> and contributors"]
 version = "0.1.0"
 
+[deps]
+BackendSelection = "680c2d7c-f67a-4cc9-ae9c-da132b1447a5"
+
 [compat]
+BackendSelection = "0.1.5"
 julia = "1.10"
