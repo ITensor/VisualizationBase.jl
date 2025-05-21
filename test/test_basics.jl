@@ -3,11 +3,13 @@ using Test: @test, @testset
 
 @testset "VisualizationBase" begin
   x = [2, 3]
-  @test sprint(visualize, x) == sprint(show, MIME"text/plain"(), x)
+  @test sprint(visualize, x) ==
+    "2-element Vector{Int64}:\n 2\n 3\n" ==
+    sprint((io, x) -> display(TextDisplay(io), x), x)
   @test sprint((io, x) -> visualize(io, x; name="y"), x) ==
-    sprint(VisualizationBase.show_named, "y" => x)
+    "y = \n 2-element Vector{Int64}:\n  2\n  3\n"
   @test sprint((io, x) -> @visualize(x, io=io), x) ==
-    sprint(VisualizationBase.show_named, "x" => x)
+    "x = \n 2-element Vector{Int64}:\n  2\n  3\n"
   @test sprint((io, x) -> @visualize(x, io=io, name="y"), x) ==
-    sprint(VisualizationBase.show_named, "y" => x)
+    "y = \n 2-element Vector{Int64}:\n  2\n  3\n"
 end
