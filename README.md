@@ -42,10 +42,13 @@ julia> Pkg.add("VisualizationBase")
 ## Examples
 
 ````julia
-using VisualizationBase: VisualizationBase
-````
+using VisualizationBase: @visualize
+using Test: @test
 
-Examples go here.
+x = [2, 3]
+y = @visualize x
+@test x === y
+````
 
 ---
 
